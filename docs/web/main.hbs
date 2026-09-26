@@ -1,0 +1,27 @@
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">
+            OpenSpace Documentation
+        </a>
+      </li>
+      {{#each documentation}}
+        <li>
+          <a href="#" onclick="sidebarNavigate({{@index}});">{{name}}</a>
+        </li>
+        <ul id='index{{@index}}-subtree' class="sidebar-subtree">
+        </ul>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div id="page-content-wrapper">
+    <div class="container-fluid documentation-container">
+      <h1>OpenSpace Documentation</h1>
+      <p>Version: {{version.[0]}}.{{version.[1]}}.{{version.[2]}}</p>
+      <div id="current-documentation-container">
+      </div>
+    </div>
+  </div>
+</div>
